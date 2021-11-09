@@ -26,7 +26,7 @@ const CartDetails = () => {
           stripeKey="pk_test_51HPNYdLVxHXfNXqKFvaPbSVxUR2RRqM7SiQvtOV473cKvhEn8Z43hz4bLmj8iegOMls6HPkzDjWGtdaBcN1EB4Q800BDwWVR5z"
         />
         <RemoveBtn
-          style={{ marginLeft: "20px" }}
+          // style={{ marginLeft: "20px", display:'block' }}
           onClick={() =>
             dispatch({
               type: "CLEAR_CART",

@@ -12,7 +12,7 @@ const CartPage = () => {
   return (
     <Container>
       {cartItem.length > 0 ? (
-        <div className="p-5">
+        <div className="py-2 px-1">
           <div>
             {cartItem.map((item) => {
               return <CartTable item={item} />;

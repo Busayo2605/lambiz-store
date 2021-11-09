@@ -52,7 +52,7 @@ const CartTable = ({ item }) => {
             }
           />
         </div>
-        <div style={{color:'red'}}>
+        <div style={{color:'red', fontSize:'1.5rem'}}>
           <MdDelete
             onClick={() =>
               dispatch({

@@ -22,7 +22,7 @@ body {
 
 .register-btn {
   border: none;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .register-details {
@@ -71,8 +71,8 @@ body {
   flex-direction: column;
 }
 
-.details-btn {
-  display: flex;
+.details-btn button {
+  margin:0 10px;
 }
 @media only screen and (max-width: 768px) {
   .shop-btn {
@@ -93,7 +93,7 @@ body {
     margin-right: 0.4rem;
   }
   .register-btn {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -106,6 +106,12 @@ body {
     font-size: 0.8rem;
   }
   .register-btn {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .details-btn button {
+    margin-top: 10px;
   }
 }
