@@ -15,14 +15,14 @@ const CartTable = ({ item }) => {
   return (
     <ProdContainer key={item.id}>
       <ImageContainer>
-        <ProdImage src={item.image} alt="products" />
+        <ProdImage style={{width:'100%',height:'100%', padding:'0'}} src={item.image} alt="products" />
       </ImageContainer>
       <DetailsContainer className="details">
         <div>
           <SubTitleBold>{item.title}</SubTitleBold>
           <SubTitleBold>Price: ${item.price}</SubTitleBold>
         </div>
-        <div>
+        <div style={{fontSize:'18px'}}>
           {item.qty === 1 ? (
             <IoIosArrowDropleft
               onClick={() =>
@@ -52,7 +52,7 @@ const CartTable = ({ item }) => {
             }
           />
         </div>
-        <div>
+        <div style={{color:'red'}}>
           <MdDelete
             onClick={() =>
               dispatch({

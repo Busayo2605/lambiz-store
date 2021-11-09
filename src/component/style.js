@@ -56,22 +56,30 @@ export const SignCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px lightgrey solid;
+  border: 2px black solid;
   border-radius: 10px;
   margin-top: 2rem;
   padding: 1.5rem;
   margin-bottom: 1rem;
+
+  /* @media only screen and (max-width: 400px) {
+    border:none;
+  } */
 `;
 export const SignUpCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px lightgrey solid;
+  border: 2px black solid;
   border-radius: 10px;
   margin-top: 0.7rem;
   font-size: 0.9rem;
   padding: 15px 1.5rem;
   margin-bottom: 1rem;
+
+  /* @media only screen and (max-width: 400px) {
+    border:none;
+  } */
 `;
 export const Navbar = styled.div`
   position: sticky;
@@ -110,6 +118,9 @@ export const LightBtn = styled.button`
   background: none;
   border: 1px solid #0080ff;
   color: black;
+  @media only screen and (max-width: 400px) {
+    border:none;
+  }
 `;
 export const DarkBtn = styled.button`
   display: block;
@@ -135,9 +146,12 @@ export const Input = styled.input`
   outline: none;
   margin-bottom: 20px;
   padding: 6px;
-  border-bottom: lightgrey 2px solid;
+  border-bottom: black 2px solid;
   margin-top: 20px;
   margin-bottom: 20px;
+  @media only screen and (max-width: 400px) {
+    width: 250px;
+  }
 `;
 export const ProdContainer = styled.div`
   display: flex;

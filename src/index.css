@@ -65,6 +65,15 @@ body {
   align-items: center;
 }
 
+.cart-details-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-btn {
+  display: flex;
+}
 @media only screen and (max-width: 768px) {
   .shop-btn {
     padding: 0.5rem 0.8rem;
