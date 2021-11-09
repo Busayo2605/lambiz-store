@@ -1,55 +1,30 @@
 import React from "react";
 import { MdDelete } from "react-icons/md";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
-import { ProdImage } from "../style";
+import {
+  DetailsContainer,
+  ImageContainer,
+  ProdContainer,
+  ProdImage,
+  SubTitleBold,
+} from "../style";
 import { StoreState } from "../../context/context";
-import { Table } from "react-bootstrap";
 
-const CartTable = ({item}) => {
-  const {
-    dispatch,
-  } = StoreState();
+const CartTable = ({ item }) => {
+  const { dispatch } = StoreState();
   return (
-    <Table key={item.id}>
-      <tbody>
-        <tr>
-          <td style={{ width: "20%", height: "120px" }}>
-            <ProdImage src={item.image} alt="products" />
-          </td>
-          <td>{item.title}</td>
-          <td>Price: ${item.price * item.qty}</td>
-          <td>
-            {item.qty === 1 ? (
-              <IoIosArrowDropleft
-                onClick={() =>
-                  dispatch({
-                    type: "REMOVE_FROM_CART",
-                    payload: item,
-                  })
-                }
-              />
-            ) : (
-              <IoIosArrowDropleft
-                onClick={() =>
-                  dispatch({
-                    type: "DECREASE_QUANTITY",
-                    payload: item.id,
-                  })
-                }
-              />
-            )}
-            <span style={{ padding: "0.5rem" }}>{item.qty}</span>
-            <IoIosArrowDropright
-              onClick={() =>
-                dispatch({
-                  type: "INCRESE_QUANTITY",
-                  payload: item,
-                })
-              }
-            />
-          </td>
-          <td>
-            <MdDelete
+    <ProdContainer key={item.id}>
+      <ImageContainer>
+        <ProdImage src={item.image} alt="products" />
+      </ImageContainer>
+      <DetailsContainer className="details">
+        <div>
+          <SubTitleBold>{item.title}</SubTitleBold>
+          <SubTitleBold>Price: ${item.price}</SubTitleBold>
+        </div>
+        <div>
+          {item.qty === 1 ? (
+            <IoIosArrowDropleft
               onClick={() =>
                 dispatch({
                   type: "REMOVE_FROM_CART",
@@ -57,10 +32,39 @@ const CartTable = ({item}) => {
                 })
               }
             />
-          </td>
-        </tr>
-      </tbody>
-    </Table>
+          ) : (
+            <IoIosArrowDropleft
+              onClick={() =>
+                dispatch({
+                  type: "DECREASE_QUANTITY",
+                  payload: item.id,
+                })
+              }
+            />
+          )}
+          <span style={{ padding: "0.5rem" }}>{item.qty}</span>
+          <IoIosArrowDropright
+            onClick={() =>
+              dispatch({
+                type: "INCRESE_QUANTITY",
+                payload: item,
+              })
+            }
+          />
+        </div>
+        <div>
+          <MdDelete
+            onClick={() =>
+              dispatch({
+                type: "REMOVE_FROM_CART",
+                payload: item,
+              })
+            }
+          />
+        </div>
+      </DetailsContainer>
+    </ProdContainer>
+
   );
 };
 

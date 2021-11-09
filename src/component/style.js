@@ -141,6 +141,7 @@ export const Input = styled.input`
 `;
 export const ProdContainer = styled.div`
   display: flex;
+  height:100%;
 `;
 export const ImageContainer = styled.div`
   width: 20%;
@@ -173,7 +174,7 @@ export const DetailsContainer = styled.div`
 
   @media only screen and (max-width: 768px) {
     display: block;
-    height: 145px;
+    height: 100%;
   }
 `;
 export const RemoveBtn = styled.button`
