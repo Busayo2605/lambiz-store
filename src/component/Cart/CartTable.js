@@ -13,9 +13,9 @@ import { StoreState } from "../../context/context";
 const CartTable = ({ item }) => {
   const { dispatch } = StoreState();
   return (
-    <ProdContainer key={item.id}>
+    <ProdContainer>
       <ImageContainer>
-        <ProdImage style={{width:'100%',height:'100%', padding:'0'}} src={item.image} alt="products" />
+        <ProdImage style={{width:'100%',height:'100%'}} src={item.image} alt="products" />
       </ImageContainer>
       <DetailsContainer className="details">
         <div>

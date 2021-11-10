@@ -15,7 +15,7 @@ const CartPage = () => {
         <div className="py-2 px-1">
           <div>
             {cartItem.map((item) => {
-              return <CartTable item={item} />;
+              return <CartTable  key={item.id} item={item} />;
             })}
           </div>
           <CartDetails />

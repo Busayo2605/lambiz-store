@@ -1,15 +1,16 @@
 import { Route, Redirect } from "react-router";
-import { StoreState } from "../context/context";
+import { auth } from "../firebase";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   
-  const {currentUser} = StoreState()
   // console.log(currentUser)
+  const user = auth.currentUser
+  console.log(user)
   return (
     <Route
       {...rest}
       render={(props) =>
-        (currentUser ? <Component {...props} /> : <Redirect to={"/sign-in"} />)
+        (user ? <Component {...props} /> : <Redirect to={"/sign-in"} />)
       }
     />
   );

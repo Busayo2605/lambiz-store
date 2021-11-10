@@ -45,7 +45,7 @@ const SignIn = () => {
         console.log(user);
         setcurrentUser({
           user,
-          // displayName: Name,
+          displayName: Name,
         });
         setLoading(true)
         history.push("/store");
