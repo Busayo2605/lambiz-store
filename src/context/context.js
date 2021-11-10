@@ -18,6 +18,7 @@ const StoreContext = ({ children }) => {
   });
   const [error, seterror] = useState("");
   const [Total, setTotal] = useState();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(state.cartItem));
@@ -25,14 +26,14 @@ const StoreContext = ({ children }) => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
+     
       if (user) {
         setcurrentUser(user);
-        // console.log(user)
       } else {
         setcurrentUser(null);
       }
     });
-  }, []);
+  }, [state]);
 
   useEffect(() => {
     setTotal(
@@ -51,6 +52,8 @@ const StoreContext = ({ children }) => {
         currentUser,
         Total,
         setcurrentUser,
+        loading,
+        setLoading,
         error,
         seterror,
       }}

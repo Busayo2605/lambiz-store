@@ -13,8 +13,10 @@ const App = () => {
     <>
       <Header />
       <Switch>
-      <PrivateRoute exact path="/" component={HomePage}/>
-        <PrivateRoute exact path="/store" component={StorePage}/>
+      <Route exact path="/">
+          <HomePage />
+        </Route>
+        <PrivateRoute path="/store" component={StorePage}/>
         <Route exact path="/cart">
           <CartPage />
         </Route>
