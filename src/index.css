@@ -13,6 +13,7 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
   color: red;
+  width: 65%;
 }
 
 .brand-link:hover {
@@ -22,15 +23,16 @@ body {
 
 .register-btn {
   border: none;
-  font-size: 2.5rem;
 }
 
 .register-details {
   display: flex;
+  flex: 1;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 100%;
   align-items: center;
+  font-size: 2rem;
 }
 .shop-btn {
   border: none;
@@ -42,6 +44,14 @@ body {
   transition: all ease-in-out 2s;
 }
 
+.history {
+  color: black;
+}
+.history:hover {
+  text-decoration: none;
+  color: #000;
+}
+
 .shop-btn:hover {
   background: rgb(181, 178, 230);
   color: #fff;
@@ -49,34 +59,32 @@ body {
 }
 .cart-icon {
   color: #000;
-  font-size: 1.3rem;
-  margin-left: 1rem;
 }
 
 .badge {
   color: #000;
-  margin-right: 1rem;
 }
 
-.status{
+.status {
   font-size: 14px;
   font-weight: 400;
   border: 1px solid blueviolet;
-  padding:4px 10px;
-  margin: 10px;
+  padding: 4px 10px;
+  /* margin: 10px; */
   color: blueviolet;
   border-radius: 10px;
 }
-
-.order-details{
+.order-details {
   display: flex;
-  width:100%;
-  justify-content:space-between;
-  padding:15px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px;
   align-items: center;
   border-top: black;
+  border-top: 1px solid blueviolet;
+  margin-top: 15px;
 }
-.order-item{
+.order-item {
   display: flex;
   flex-direction: column;
 }
@@ -94,7 +102,7 @@ body {
 }
 
 .details-btn button {
-  margin:0 10px;
+  margin: 0 10px;
 }
 @media only screen and (max-width: 768px) {
   .shop-btn {
@@ -106,16 +114,22 @@ body {
   }
 
   .cart-icon {
-    font-size: 1.1rem;
-    margin-left: 0.4rem;
+    font-size: 1.5rem;
+  
+  }
+  .order-details{
+    display: block;
+    height: 100%;
   }
 
   .badge {
     color: #000;
-    margin-right: 0.4rem;
+  }
+  .history {
+    font-size: 1.5rem;
   }
   .register-btn {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -127,17 +141,22 @@ body {
   .register-details {
     font-size: 0.8rem;
   }
-  .register-btn {
-    font-size: 1.2rem;
-  }
 }
 
 @media only screen and (max-width: 400px) {
   .details-btn button {
     margin-top: 10px;
   }
+  .history {
+    font-size: 1.2rem;
+  }
+  .register-btn {
+    font-size: 1.2rem;
+  }
+  .cart-icon {
+    font-size: 1.2rem;
+  }
 }
-
 
 .lds-hourglass {
   display: inline-block;
@@ -171,8 +190,7 @@ body {
   }
 }
 
-
-.loading-container{
+.loading-container {
   display: flex;
   width: 100vw;
   height: 80vh;

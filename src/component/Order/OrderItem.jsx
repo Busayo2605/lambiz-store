@@ -21,8 +21,8 @@ const OrderItem = ({ order }) => {
           <SubTitleBold>{order.title}</SubTitleBold>
           <SubTitleBold>Price: ${order.price}</SubTitleBold>
         </div>
-        <div style={{ fontSize: "18px" }}>
-          <SubTitleBold style={{ padding: "0.5rem" }}> Quantity:{order.qty}</SubTitleBold>
+        <div>
+          <SubTitleBold style={{ fontWeight:'bold'}}> Quantity: {order.qty}</SubTitleBold>
         </div>
       </DetailsContainer>
     </ProdContainer>
