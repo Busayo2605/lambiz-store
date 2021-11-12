@@ -16,8 +16,8 @@ const OrderItem = ({ order }) => {
           alt="products"
         />
       </ImageContainer>
-      <DetailsContainer className="details">
-        <div>
+      <DetailsContainer>
+        <div className="details">
           <SubTitleBold>{order.title}</SubTitleBold>
           <SubTitleBold>Price: ${order.price}</SubTitleBold>
         </div>
