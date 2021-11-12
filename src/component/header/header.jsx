@@ -45,6 +45,7 @@ const Header = () => {
                 <Badge className="badge">{cartItem.length}</Badge>
               </Link>
             </CartBtn>
+            <Link to='my-order'>Order History</Link>
             <div className="register-btn">
               <BiLogOut onClick={handleSignOut} />
             </div>

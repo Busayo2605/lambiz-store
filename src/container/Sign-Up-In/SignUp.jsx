@@ -41,11 +41,14 @@ const SignIn = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        const usercred = auth.currentUser.displayName
+        console.log(usercred)
+ 
 
         console.log(user);
         setcurrentUser({
           user,
-          displayName: Name,
+          // usercred: Name,
         });
         setLoading(true)
         history.push("/store");

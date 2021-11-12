@@ -9,12 +9,29 @@ import {
   RemoveBtn,
   SubTitleBold,
 } from "./style";
+// import {
+// //   collection,
+// //   getDocs,
+// //   addDoc,
+// //   updateDoc,
+// //   deleteDoc,
+// //   doc,
+// // } from "firebase/firestore";
+// // import {db} from '../firebase'
+
+
 
 const SingleProduct = ({ product }) => {
   const {
     state: { cartItem },
     dispatch,
   } = StoreState();
+
+  // const usersCollectionRef = collection(db, "cartItem");
+
+  // const addtocart = async (image,title,price,qty) => {
+  //   await addDoc(usersCollectionRef, {img:image, title: title, price: Number(price) });
+  // }
 
   return (
 

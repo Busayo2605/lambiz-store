@@ -5,6 +5,14 @@ const StoreReducer = (state, action) => {
         ...state,
         cartItem: [...state.cartItem, { ...action.payload, qty: 1 }],
       };
+    case "ADD_TO_ORDER":
+      // const date = new Date()
+      return {
+        ...state,
+
+        myOrder: [...state.myOrder,action.payload],
+        cartItem: [],
+      };
     case "REMOVE_FROM_CART":
       return {
         ...state,

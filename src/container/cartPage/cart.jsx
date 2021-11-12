@@ -18,7 +18,7 @@ const CartPage = () => {
               return <CartTable  key={item.id} item={item} />;
             })}
           </div>
-          <CartDetails />
+          <CartDetails item={cartItem} />
         </div>
       ) : (
         <div className="empty-body">

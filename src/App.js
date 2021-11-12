@@ -7,6 +7,7 @@ import PrivateRoute from "./component/PrivateRoute";
 import HomePage from "./container/HomePage/home";
 import StorePage from "./container/StorePage/Store";
 import CartPage from "./container/cartPage/cart";
+import OrderPage from "./container/orderPage";
 
 const App = () => {
   return (
@@ -25,6 +26,9 @@ const App = () => {
         </Route>
         <Route exact path="/sign-up">
           <SignUp />
+        </Route>
+        <Route exact path="/my-order">
+          <OrderPage />
         </Route>
       </Switch>
     </>

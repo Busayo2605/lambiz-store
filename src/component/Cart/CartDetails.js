@@ -1,32 +1,52 @@
-import React from "react";
 import { useHistory } from "react-router";
 import StripeCheckout from "react-stripe-checkout";
 import { StoreState } from "../../context/context";
 import { RemoveBtn, Title } from "../style";
 
-const CartDetails = () => {
-  const { Total, dispatch } = StoreState();
+const CartDetails = ({ item }) => {
+  const { Total, dispatch, setStatus } = StoreState();
+
   const history = useHistory();
   const onToken = (token) => {
-    dispatch({
-      type: "CLEAR_CART",
-    });
-    console.log(token);
-    history.push("/store");
+    try {
+      dispatch({
+        type: "ADD_TO_ORDER",
+        payload: item,
+      });
+      setStatus("SUCCESS");
+      console.log(token);
+      history.push("/store");
+    } catch (error) {
+      dispatch({
+        type: "ADD_TO_ORDER",
+        payload: item,
+      });
+      setStatus("FAILED");
+      history.push("/store");
+    }
   };
+
+  // useEffect(() => {
+  //   const usersCollectionRef = collection(db, "myOrder");
+
+  //   const createHistory = async () => {
+  //     await addDoc(usersCollectionRef, { order: myOrder });
+  //   };
+  //   // localStorage.setItem("my-order", JSON.stringify(state.myOrder));
+  //   createHistory()
+  // }, [myOrder]);
   return (
     <div className="cart-details-container">
       <Title>Total: $ {Math.round(Total)}</Title>
-      <div className='details-btn'>
+      <div className="details-btn">
         <StripeCheckout
           name="Lambiz Store"
           token={onToken}
-          currency="usd"
+          // currency='usd'
           amount={Math.round(Total) * 100}
           stripeKey="pk_test_51HPNYdLVxHXfNXqKFvaPbSVxUR2RRqM7SiQvtOV473cKvhEn8Z43hz4bLmj8iegOMls6HPkzDjWGtdaBcN1EB4Q800BDwWVR5z"
-        />
+        ></StripeCheckout>
         <RemoveBtn
-          // style={{ marginLeft: "20px", display:'block' }}
           onClick={() =>
             dispatch({
               type: "CLEAR_CART",

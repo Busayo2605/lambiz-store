@@ -5,7 +5,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
   
   // console.log(currentUser)
   const user = auth.currentUser
-  console.log(user)
+
   return (
     <Route
       {...rest}

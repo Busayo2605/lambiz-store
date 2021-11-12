@@ -58,6 +58,15 @@ body {
   margin-right: 1rem;
 }
 
+.status{
+  border: 1px solid blueviolet;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin: 10px;
+  color: blueviolet;
+  border-radius: 10px;
+}
+
 .empty-body {
   display: flex;
   height: 90vh;

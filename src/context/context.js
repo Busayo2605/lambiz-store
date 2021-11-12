@@ -8,16 +8,17 @@ import {
 } from "react";
 import StoreReducer from "./reducer";
 import { auth } from "../firebase";
-
 const Context = createContext();
 
 const StoreContext = ({ children }) => {
   const [currentUser, setcurrentUser] = useState(null);
   const [state, dispatch] = useReducer(StoreReducer, {
-    cartItem:JSON.parse(localStorage.getItem('cart')) || [],
+    cartItem: JSON.parse(localStorage.getItem("cart")) || [],
+    myOrder: JSON.parse(localStorage.getItem("my-order")) || [],
   });
   const [error, seterror] = useState("");
   const [Total, setTotal] = useState();
+  const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -25,8 +26,10 @@ const StoreContext = ({ children }) => {
   }, [state.cartItem]);
 
   useEffect(() => {
+    localStorage.setItem("my-order", JSON.stringify(state.myOrder));
+  }, [state.myOrder]);
+  useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-     
       if (user) {
         setcurrentUser(user);
       } else {
@@ -56,6 +59,8 @@ const StoreContext = ({ children }) => {
         setLoading,
         error,
         seterror,
+        status,
+        setStatus,
       }}
     >
       {children}
