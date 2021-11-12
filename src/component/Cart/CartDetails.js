@@ -33,10 +33,10 @@ const CartDetails = ({ item }) => {
         <StripeCheckout
           name="Lambiz Store"
           token={onToken}
-          // currency='usd'
+          currency='usd'
           amount={Math.round(Total) * 100}
           stripeKey="pk_test_51HPNYdLVxHXfNXqKFvaPbSVxUR2RRqM7SiQvtOV473cKvhEn8Z43hz4bLmj8iegOMls6HPkzDjWGtdaBcN1EB4Q800BDwWVR5z"
-        ></StripeCheckout>
+        />
         <RemoveBtn
           onClick={() =>
             dispatch({
