@@ -14,16 +14,14 @@ const CartDetails = ({ item }) => {
         payload: item,
       });
       setStatus("SUCCESS");
-      console.log(token);
-      history.push("/store");
     } catch (error) {
       dispatch({
         type: "ADD_TO_ORDER",
         payload: item,
       });
       setStatus("FAILED");
-      history.push("/store");
     }
+    history.push("/store");
   };
 
   return (
