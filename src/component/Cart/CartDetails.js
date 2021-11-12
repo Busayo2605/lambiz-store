@@ -26,15 +26,6 @@ const CartDetails = ({ item }) => {
     }
   };
 
-  // useEffect(() => {
-  //   const usersCollectionRef = collection(db, "myOrder");
-
-  //   const createHistory = async () => {
-  //     await addDoc(usersCollectionRef, { order: myOrder });
-  //   };
-  //   // localStorage.setItem("my-order", JSON.stringify(state.myOrder));
-  //   createHistory()
-  // }, [myOrder]);
   return (
     <div className="cart-details-container">
       <Title>Total: $ {Math.round(Total)}</Title>

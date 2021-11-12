@@ -229,7 +229,7 @@ margin: 20px;
 `
 export const Order = styled.div`
 margin: 20px;
-box-shadow:1px 1px 1px 0px ;
+box-shadow:1px 1px 1px 0px #fff;
 border-radius: 16px;
 background: #f6f6f6;
 padding: 20px;

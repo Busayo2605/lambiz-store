@@ -18,6 +18,12 @@ const StoreReducer = (state, action) => {
         ...state,
         cartItem: state.cartItem.filter((p) => p.id !== action.payload.id),
       };
+
+    case 'REMOVE-FROM-ORDER':
+      return {
+        ...state,
+        myOrder: state.myOrder.filter((a)=>a.id !== action.payload )
+      }
     case "INCRESE_QUANTITY":
       return {
         ...state,

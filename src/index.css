@@ -59,14 +59,27 @@ body {
 }
 
 .status{
+  font-size: 14px;
+  font-weight: 400;
   border: 1px solid blueviolet;
-  padding: 10px;
-  font-size: 1.2rem;
+  padding:4px 10px;
   margin: 10px;
   color: blueviolet;
   border-radius: 10px;
 }
 
+.order-details{
+  display: flex;
+  width:100%;
+  justify-content:space-between;
+  padding:15px;
+  align-items: center;
+  border-top: black;
+}
+.order-item{
+  display: flex;
+  flex-direction: column;
+}
 .empty-body {
   display: flex;
   height: 90vh;

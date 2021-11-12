@@ -22,7 +22,7 @@ const OrderItem = ({ order }) => {
           <SubTitleBold>Price: ${order.price}</SubTitleBold>
         </div>
         <div style={{ fontSize: "18px" }}>
-          <strong style={{ padding: "0.5rem" }}> qty:{order.qty}</strong>
+          <SubTitleBold style={{ padding: "0.5rem" }}> Quantity:{order.qty}</SubTitleBold>
         </div>
       </DetailsContainer>
     </ProdContainer>
