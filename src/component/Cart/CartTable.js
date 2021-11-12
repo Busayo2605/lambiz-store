@@ -17,8 +17,8 @@ const CartTable = ({ item }) => {
       <ImageContainer>
         <ProdImage style={{width:'100%',height:'100%'}} src={item.image} alt="products" />
       </ImageContainer>
-      <DetailsContainer className="details">
-        <div>
+      <DetailsContainer>
+        <div  className="details">
           <SubTitleBold>{item.title}</SubTitleBold>
           <SubTitleBold>Price: ${item.price}</SubTitleBold>
         </div>

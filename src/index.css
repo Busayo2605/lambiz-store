@@ -21,8 +21,9 @@ body {
   color: red;
 }
 
-.register-btn {
+.sign-icon {
   border: none;
+  font-size: 2rem;
 }
 
 .register-details {
@@ -42,6 +43,10 @@ body {
   border-radius: 20px;
   color: #fff;
   transition: all ease-in-out 2s;
+}
+
+.details {
+  width: 60%;
 }
 
 .history {
@@ -105,8 +110,14 @@ body {
   margin: 0 10px;
 }
 @media only screen and (max-width: 768px) {
+  .details {
+    width: 100%;
+  }
   .shop-btn {
     padding: 0.5rem 0.8rem;
+    font-size: 1.2rem;
+  }
+  .sign-icon {
     font-size: 1.2rem;
   }
   .brand-link {
@@ -115,9 +126,8 @@ body {
 
   .cart-icon {
     font-size: 1.5rem;
-  
   }
-  .order-details{
+  .order-details {
     display: block;
     height: 100%;
   }
@@ -151,6 +161,9 @@ body {
     font-size: 1.2rem;
   }
   .register-btn {
+    font-size: 1.2rem;
+  }
+  .sign-icon {
     font-size: 1.2rem;
   }
   .cart-icon {

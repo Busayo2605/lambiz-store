@@ -35,7 +35,7 @@ const Header = () => {
 
       <>
         {currentUser === null ? (
-          <Link to="/sign-in" className="cart-icon">
+          <Link to="/sign-in" className="sign-icon">
             <BiLogIn />
           </Link>
         ) : (
